@@ -7,9 +7,9 @@ namespace Exercicio_4
         static void Main(string[] args)
         {
             int[] numeros;
-
-            Console.WriteLine("Digite 10 números");
             numeros = new int[10];
+
+            Console.WriteLine($"Digite {numeros.Length} números inteiros");
 
             for (int i = 0; i < numeros.Length; i++)
             {
@@ -20,10 +20,7 @@ namespace Exercicio_4
             Array.Sort(numeros);
 
             Console.WriteLine($"O menor número é: {numeros[0]}");
-            Console.WriteLine($"O menor número é: {numeros[9]}");
-
-
-
+            Console.WriteLine($"O menor número é: {numeros[numeros.Length-1]}");
         }
     }
 }

@@ -7,9 +7,9 @@ namespace Exercicio_6
         static void Main(string[] args)
         {
             string[] nomes;
+            nomes = new string[3];
 
-            Console.WriteLine("Digite 10 nomes");
-            nomes = new string[10];
+            Console.WriteLine($"Digite {nomes.Length} nomes");
 
             for (var i = 0; i < nomes.Length; i++)
             {
@@ -19,17 +19,30 @@ namespace Exercicio_6
 
             Console.WriteLine("Qual nome você quer buscar");
             string nomeVerificar = Console.ReadLine();
+            bool encontrado = false;
 
             foreach (var item in nomes)
             {
-                if (item == nomeVerificar)
+                if (nomeVerificar == item)
                 {
-                    Console.WriteLine("Achei");
+                    encontrado = true;
                 }
+                // else
+                // {
+                //     Console.WriteLine("Não Achei");
+                // }
                 // if(item != nomeVerificar)
                 // {
                 //     Console.WriteLine("Não achei");
                 // }
+            }
+            if (encontrado)
+            {
+                Console.WriteLine("Achei!!");
+            }
+            else
+            {
+                Console.WriteLine("Não Achei!!");
             }
         }
     }

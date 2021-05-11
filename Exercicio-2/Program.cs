@@ -11,23 +11,26 @@ namespace Exercicio_2
 
             Console.WriteLine("Quantos litros você quer abastecer?");
             double quantidadeLitros = double.Parse(Console.ReadLine());
+
+            double valorA = quantidadeLitros * 4.90;
+            double valorG = quantidadeLitros * 5.30;
+
+
             switch (tipoCombustivel)
             {
                 case "A":
 
                     if (quantidadeLitros <= 20)
                     {
-                        double valor = quantidadeLitros * 4.90;
-                        double desconto = valor * 0.03;
-                        double valorDesconto = valor - desconto;
+                        double desconto = valorA * 0.03;
+                        double valorDesconto = valorA - desconto;
 
                         Console.WriteLine($"O valor do seu abastecimento é igual a: {valorDesconto}");
                     }
                     else
                     {
-                        double valor = quantidadeLitros * 4.90;
-                        double desconto = valor * 0.05;
-                        double valorDesconto = valor - desconto;
+                        double desconto = valorA * 0.05;
+                        double valorDesconto = valorA - desconto;
 
                         Console.WriteLine($"O valor do seu abastecimento é igual a: {valorDesconto}");
                     }
@@ -35,22 +38,21 @@ namespace Exercicio_2
                 case "G":
                     if (quantidadeLitros <= 20)
                     {
-                        double valor = quantidadeLitros * 5.30;
-                        double desconto = valor * 0.04;
-                        double valorDesconto = valor - desconto;
+                        double desconto = valorG * 0.04;
+                        double valorDesconto = valorG - desconto;
 
                         Console.WriteLine($"O valor do seu abastecimento é igual a: {valorDesconto}");
                     }
                     else
                     {
-                        double valor = quantidadeLitros * 5.30;
-                        double desconto = valor * 0.06;
-                        double valorDesconto = valor - desconto;
+                        double desconto = valorG * 0.06;
+                        double valorDesconto = valorG - desconto;
 
                         Console.WriteLine($"O valor do seu abastecimento é igual a: {valorDesconto}");
                     }
                     break;
                 default:
+                    Console.WriteLine("Opção invalida");
                     break;
             }
 

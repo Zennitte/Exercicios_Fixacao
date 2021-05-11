@@ -23,21 +23,21 @@ namespace Exercicio_3
                 Console.WriteLine("Você tem um desconto de 2%");
                 double desconto = total * 0.02;
                 double totalDesconto = total - desconto;
-                Console.WriteLine($"Seu total a pagar é: {totalDesconto}");
+                Console.WriteLine($"Seu total a pagar é: R${totalDesconto}");
             }
             else if (quantidade > 5 && quantidade <= 10)
             {
                 Console.WriteLine("Você tem um desconto de 3%");
                 double desconto = total * 0.03;
                 double totalDesconto = total - desconto;
-                Console.WriteLine($"Seu total a pagar é: {totalDesconto}");
+                Console.WriteLine($"Seu total a pagar é: R${totalDesconto}");
             }
-            else if (quantidade > 10)
+            else
             {
                 Console.WriteLine("Você tem um desconto de 5%");
                 double desconto = total * 0.05;
                 double totalDesconto = total - desconto;
-                Console.WriteLine($"Seu total a pagar é: {totalDesconto}");
+                Console.WriteLine($"Seu total a pagar é: R${totalDesconto}");
             }
         }
     }
